@@ -1,0 +1,81 @@
+font:
+  size: 14
+  offset:
+    y: 16
+  glyph_offset:
+    y: 9
+  bold:
+    family: "MesloLGS NF"
+    style: Regular
+  normal:
+    family: "MesloLGS NF"
+    style: Regular
+window:
+  padding:
+    x: 5
+    y: 5
+  dimensions:
+    columns: 90
+    lines: 30
+  opacity: 0.9
+
+cursor:
+  unfocused_hollow: true
+  style:
+    blinking: Never
+
+shell:
+  program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+  key_bindings:
+    - { key: V, mods: Control|Shift, action: Paste }
+    - { key: C, mods: Control|Shift, action: Copy }
+    - { key: Key0, mods: Control, action: ResetFontSize }
+    - { key: Equals, mods: Control, action: IncreaseFontSize }
+    - { key: Add, mods: Control, action: IncreaseFontSize }
+    - { key: Subtract, mods: Control, action: DecreaseFontSize }
+    - { key: Minus, mods: Control, action: DecreaseFontSize }
+    - { key: N, mods: Control, action: SpawnNewInstance }
+
+env:
+  TERM: xterm-256color
+
+scrolling:
+  history: 2000
+  auto_scroll: true
+
+theme: github_dark
+colors:
+  # Default colors
+  primary:
+    background: '0x24292e'
+    foreground: '0xd1d5da'
+
+  # Normal colors
+  normal:
+    black: '0x24292e'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xe2e210'
+    blue: '0x3b8eea'
+    magenta: '0xbc3fbc'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  # Bright colors
+  bright:
+    black: '0x666666'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xf5f543'
+    blue: '0x3b8eea'
+    magenta: '0xd670d6'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf14c4c' }
