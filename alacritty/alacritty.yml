@@ -1,5 +1,5 @@
 font:
-  size: 14
+  size: 17
   offset:
     y: 16
   glyph_offset:
@@ -29,7 +29,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux"
+    - "tmux"
   key_bindings:
     - { key: V, mods: Control|Shift, action: Paste }
     - { key: C, mods: Control|Shift, action: Copy }
